@@ -4,11 +4,11 @@ import argparse
 from urllib.parse import quote_plus
 import platform
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 parser = argparse.ArgumentParser(description='Search for movies')
 parser.version = "Movie Search {} on {}".format(__version__, platform.platform())
-parser.add_argument('--key', type=str, nargs=1)
+parser.add_argument('--key', type=str, nargs=1, required=True)
 parser.add_argument('query', metavar='query string', type=str, nargs='+',
                     help='The input to search for')
 parser.add_argument('--version', action='version')
