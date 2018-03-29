@@ -6,10 +6,16 @@
 </head>
 <body>
     <h1>Movie Search</h1>
-    {% for key, item in movie.items() %}
-    <p><b>{{ key }}</b>: {{ item }}</p>
-    {% endfor %}
-
-    <img src="{{ movie['Poster'] }}">
+    {% if movie %}
+        {% for key, item in movie.items() %}
+            <p><b>{{ key }}</b>: {{ item }}</p>
+        {% endfor %}
+    {% else %}
+        <form method="post">
+            Enter a movie:<br>
+            <input type="text" name="movie">
+            <input type="button" value="Submit">
+        </form>
+    {% endif %}
 </body>
 </html>
