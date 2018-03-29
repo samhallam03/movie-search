@@ -4,7 +4,10 @@ import argparse
 from urllib.parse import quote_plus
 import platform
 
-__version__ = "0.1.1"
+from flask import Flask, render_template, jsonify
+
+__version__ = "0.2.1"
+app = Flask(__name__)
 
 parser = argparse.ArgumentParser(description='Search for movies')
 parser.version = "Movie Search {} on {}".format(__version__, platform.platform())
@@ -21,7 +24,16 @@ search_query = quote_plus(" ".join(args.query))
 req = requests.get("http://omdbapi.com/?t={}&apikey={}".format(search_query, api_key[0]))
 movie = req.json()
 
-for key, item in movie.items():
-    print(f"{key} : {item}")
+
+@app.route("/")
+def home():
+    if movie['Response'] == "False":
+        return render_template("home.html", movie=movie['Error'])
+    else:
+        return render_template("home.html", movie=movie)
+
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=3333)
 
 

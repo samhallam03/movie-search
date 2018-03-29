@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+</head>
+<body>
+    <h1>Movie Search</h1>
+    {% for key, item in movie.items() %}
+    <p><b>{{ key }}</b>: {{ item }}</p>
+    {% endfor %}
+
+    <img src="{{ movie['Poster'] }}">
+</body>
+</html>

@@ -6,6 +6,7 @@ verify_ssl = true
 [packages]
 requests = "*"
 argparse = "*"
+flask = "*"
 
 [requires]
 python_version = "3.6"
