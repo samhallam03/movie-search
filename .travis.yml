@@ -17,3 +17,10 @@
 
   script:
     - pipenv run python -m flake8
+
+  cache: pip
+
+  notifications:
+    email:
+      on_success: never
+      on_failure: never
