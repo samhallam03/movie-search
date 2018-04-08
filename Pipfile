@@ -7,6 +7,7 @@ verify_ssl = true
 requests = "*"
 argparse = "*"
 flask = "*"
+"flake8" = "*"
 
 [requires]
 python_version = "3.6"
