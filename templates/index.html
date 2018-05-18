@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie Search</title>
+    
+    <link href="/static/css/materialize.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Movie Search</h1>
-    {% if movie %}
-        {% for key, item in movie.items() %}
-            <p><b>{{ key }}</b>: {{ item }}</p>
-        {% endfor %}
-    {% else %}
-        <form method="post">
-            Enter a movie:<br>
-            <input type="text" name="movie">
-            <button type="submit">Submit</button>
-        </form>
-    {% endif %}
+    <center>
+        {% if movie %}
+            {% for key, item in movie.items() %}
+                {% if key == "Title" %}
+                    <h1>{{ item }}</h1>
+                {% elif key == "Poster" %}
+                    <p><b>{{ key }}</b>:<br><img src="{{ item }}"/></p>
+                {% else %}
+                    <p><b>{{ key }}</b>:<br> {{ item }}</p>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h1>Movie Search</h1>
+            <form method="post">
+                <h5>Enter a movie:</h5><br>
+                <input type="text" name="movie" placeholder="Movie Name">
+                <button class="btn-large waves-effect waves-light" type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </center>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
