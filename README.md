@@ -22,3 +22,8 @@ Finally, to run the program, execute:
 
 
 `$ python run.py --key [insert key here]`
+
+To use the program, open a web browser and enter this url:
+
+
+`http://localhost:3333` (If the port is already being used, the program will not run.)
