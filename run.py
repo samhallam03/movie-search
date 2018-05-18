@@ -6,6 +6,9 @@ import platform
 
 from flask import Flask, render_template, request
 
+HOST = "127.0.0.1"
+PORT = 3333
+
 __version__ = "0.3.1"
 app = Flask(__name__)
 
@@ -30,4 +33,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=3333)
+    app.run(host=HOST, port=PORT)
