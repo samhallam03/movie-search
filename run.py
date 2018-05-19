@@ -25,7 +25,7 @@ api_key = args.key
 def index():
     if request.method == 'POST':
         search_query = quote_plus(request.form['movie'])
-        req = requests.get("http://omdbapi.com/?t={}&apikey={}&plot=full".format(search_query, api_key[0]))
+        req = requests.get("http://omdbapi.com/?t={}&apikey={}".format(search_query, api_key[0]))
         movie = req.json()
         return render_template("index.html", movie=movie)
     else:
