@@ -23,7 +23,7 @@ Finally, to run the program, execute:
 
 `$ python run.py --key [insert key here]`
 
-To use the program, open a web browser and enter this url:
+To use the program, open a web browser and enter this url which is the default. The 'HOST' and 'PORT' variables can be changed in the main file:
 
 
 `http://localhost:3333` (If the port is already being used, the program will not run.)
