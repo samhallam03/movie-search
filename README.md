@@ -1,6 +1,6 @@
 # movie-search
 
-Movie Search allows you to search for any movie available on [OMDb API](http://www.omdbapi.com/). It lists available information, for example the plot or the film ratings from different reviewers.
+Movie Search allows you to search for any movie available on [OMDb API](http://www.omdbapi.com/). It lists available information, for example the plot or the film ratings from different reviewers. You can also search for TV shows, however the information may not be formatted properly which it will be in the future.
 
 # Setup
 
