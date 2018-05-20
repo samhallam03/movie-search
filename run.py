@@ -9,7 +9,7 @@ from flask import Flask, render_template, request
 HOST = "127.0.0.1"
 PORT = 3333
 
-__version__ = "0.3.1"
+__version__ = "1.0.0"
 app = Flask(__name__)
 
 parser = argparse.ArgumentParser(description='Search for movies')
